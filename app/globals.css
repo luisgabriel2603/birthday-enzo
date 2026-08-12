@@ -1,0 +1,204 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  color-scheme: dark;
+  --radius: 0.5rem;
+
+  /* Noite de Nova York: quase preto azulado */
+  --background: oklch(0.16 0.02 265);
+  --foreground: oklch(0.96 0.01 260);
+
+  --card: oklch(0.2 0.025 265);
+  --card-foreground: oklch(0.96 0.01 260);
+
+  --popover: oklch(0.2 0.025 265);
+  --popover-foreground: oklch(0.96 0.01 260);
+
+  /* Vermelho Homem-Aranha */
+  --primary: oklch(0.58 0.22 25);
+  --primary-foreground: oklch(0.98 0.01 260);
+
+  /* Azul elétrico */
+  --secondary: oklch(0.5 0.16 255);
+  --secondary-foreground: oklch(0.98 0.01 260);
+
+  --muted: oklch(0.24 0.02 265);
+  --muted-foreground: oklch(0.72 0.02 260);
+
+  /* Âmbar de palco */
+  --accent: oklch(0.78 0.15 75);
+  --accent-foreground: oklch(0.18 0.02 265);
+
+  --destructive: oklch(0.58 0.22 25);
+  --destructive-foreground: oklch(0.98 0.01 260);
+
+  --border: oklch(0.32 0.03 265);
+  --input: oklch(0.32 0.03 265);
+  --ring: oklch(0.58 0.22 25);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Oswald", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply bg-background;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .ambient-glow {
+    background:
+      radial-gradient(circle at 50% 0%, oklch(0.4 0.18 25 / 0.28), transparent 55%),
+      radial-gradient(circle at 15% 90%, oklch(0.35 0.14 255 / 0.3), transparent 50%);
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(oklch(0.5 0.05 265 / 0.35) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.5 0.05 265 / 0.35) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: radial-gradient(circle at 50% 40%, black, transparent 75%);
+    mask-image: radial-gradient(circle at 50% 40%, black, transparent 75%);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 24px oklch(0.58 0.22 25 / 0.55);
+  }
+
+  .hud-border {
+    position: relative;
+  }
+  .hud-border::before,
+  .hud-border::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: var(--primary);
+    border-style: solid;
+  }
+  .hud-border::before {
+    top: -1px;
+    left: -1px;
+    border-width: 2px 0 0 2px;
+  }
+  .hud-border::after {
+    bottom: -1px;
+    right: -1px;
+    border-width: 0 2px 2px 0;
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+  }
+  .animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+  }
+
+  @keyframes spin-slow {
+    to { transform: rotate(360deg); }
+  }
+  .animate-spin-slow {
+    animation: spin-slow 40s linear infinite;
+  }
+
+  @keyframes pulse-ring {
+    0% { transform: scale(0.9); opacity: 0.7; }
+    100% { transform: scale(1.7); opacity: 0; }
+  }
+  .animate-pulse-ring {
+    animation: pulse-ring 2.4s ease-out infinite;
+  }
+
+  @keyframes glitch {
+    0%, 92%, 100% { transform: translate(0); }
+    93% { transform: translate(-2px, 1px); }
+    95% { transform: translate(2px, -1px); }
+    97% { transform: translate(-1px, -1px); }
+  }
+  .animate-glitch {
+    animation: glitch 4s infinite;
+  }
+
+  @keyframes equalize {
+    0%, 100% { transform: scaleY(0.3); }
+    50% { transform: scaleY(1); }
+  }
+  .eq-bar {
+    transform-origin: bottom;
+    animation: equalize 1s ease-in-out infinite;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-float-slow,
+    .animate-spin-slow,
+    .animate-pulse-ring,
+    .animate-glitch,
+    .eq-bar {
+      animation: none;
+    }
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
