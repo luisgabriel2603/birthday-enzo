@@ -1,9 +1,9 @@
-import { PhotoFrame } from "./photo-frame"
-import { Reveal } from "./reveal"
-import { birthday } from "@/data/birthday"
+import { birthday } from "@/data/birthday";
+import { PhotoFrame } from "./photo-frame";
+import { Reveal } from "./reveal";
 
 export function GallerySection() {
-  const { gallery } = birthday
+  const { gallery } = birthday;
 
   return (
     <section id="momentos" className="relative px-4 py-24 md:px-6">
@@ -22,8 +22,8 @@ export function GallerySection() {
           {gallery.map((item, i) => (
             <Reveal
               key={item.title}
-              delay={i * 130}
-              className="mb-6 break-inside-avoid"
+              delay={i * 30}
+              className="mb-6 "
             >
               <figure className="group">
                 <div className="relative overflow-hidden rounded-xl bg-muted/20">

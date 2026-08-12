@@ -1,5 +1,3 @@
-// Todos os textos editáveis do site ficam aqui.
-// Basta trocar os valores abaixo para personalizar o aniversário.
 
 export interface Stat {
   label: string
@@ -33,7 +31,7 @@ export const birthday = {
     title: "Parabéns",
     subtitle:
       "Metade nego nagô, metade violeiro. .",
-    heroImage: "/images/Principal.png",
+    heroImage: "/images/Principal.jpeg",
     ctaPrimary: "Bora começar?",
     ctaSecondary: "Uns recadinhos",
   },
@@ -82,7 +80,10 @@ export const birthday = {
     subtitle: "Mensagens de quem te admira.",
     from: "Com carinho",
     paragraphs: [
-      { message: `Feliz aniversário mano, muitos anos de vida e felicidades, saiba que você é uma pessoa muito especial nas nossas vidas. Dou muitas risadas sozinho lembrando das conversas e histórias hilárias que temos por aí e espero poder continuar escrevendo novas histórias nessa vida com você por perto`, author: "Gabriel" },
+      {
+        message: `Feliz aniversário mano, muitos anos de vida e felicidades, saiba que você é uma pessoa muito especial nas nossas vidas. Dou muitas risadas sozinho lembrando das conversas e histórias hilárias que temos por aí e espero poder continuar escrevendo novas histórias nessa vida com você por perto`,
+        author: "Gabriel"
+      },
     ],
   },
   footer: {

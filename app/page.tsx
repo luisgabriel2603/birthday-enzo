@@ -11,51 +11,40 @@ import { SetlistSection } from "@/components/birthday/setlist-section";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-neutral-950 text-white">
-      {/* Background global */}
       <ParticleBackground />
 
-      {/* Navegação */}
       <Navbar />
 
-      {/* Conteúdo */}
       <div className="relative z-10">
-        {/* HERO */}
-        <section id="inicio">
+
+        <section>
           <HeroSection />
         </section>
 
-        {/* HISTÓRIA */}
         <Reveal>
-          <section id="historia">
+          <section>
             <HeroStory />
           </section>
         </Reveal>
 
-        {/* MENSAGEM */}
         <Reveal>
-          <section id="mensagem">
+          <section>
             <MessageSection />
           </section>
         </Reveal>
 
-
-        {/* PLAYLIST / SETLIST */}
         <Reveal>
-          <section id="setlist">
+          <section>
             <SetlistSection />
           </section>
         </Reveal>
 
-        {/* GALERIA */}
-
-        <section id="galeria">
+        <section>
           <GallerySection />
         </section>
 
-
       </div>
 
-      {/* Footer */}
       <Footer />
     </main>
   );

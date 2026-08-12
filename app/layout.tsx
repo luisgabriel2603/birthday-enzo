@@ -11,7 +11,10 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Enzo Gabriel 🎂",
-  description: "Parabéns mano Enzo.",
+  description: "Parabéns Enzo.",
+  icons: {
+    icon: "/homem-aranha.png",
+  }
 };
 
 export default function RootLayout({
