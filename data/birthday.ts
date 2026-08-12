@@ -53,14 +53,14 @@ export const birthday = {
   },
   stats: [
     { label: "Anos", value: "15", hint: "de lendas e trilhas" },
-    { label: "Acordes", value: "∞", hint: "de solos improvisados" },
+    { label: "Acordes", value: "∞", hint: "e solos improvisados" },
     { label: "Missas", value: "999+", hint: "do exímio acólito" },
     { label: "Energia", value: "100%", hint: "e carga total pro rolê" },
   ] as Stat[],
   gallery: Array.from({ length: 34 }, (_, i) => ({
     title: ``,
     caption: ``,
-    tag: "Fotos",
+    tag: `#${i + 1}`,
     image: `/images/foto${i + 1}.jpeg`,
   })) as GalleryItem[],
   playlist: {

@@ -11,10 +11,10 @@ export function GallerySection() {
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="font-display text-sm uppercase tracking-[0.3em] text-primary">Registros</p>
           <h2 className="mt-3 font-display text-4xl font-bold uppercase tracking-tight text-balance md:text-5xl">
-            Momentos de herói
+            Momentos
           </h2>
-          <p className="mt-4 leading-relaxed text-muted-foreground">
-            Instantâneos capturados entre um salto de teia e um solo de guitarra.
+          <p className="mt-4 mb-8 leading-relaxed text-muted-foreground">
+            Uma galeria de momentos especiais.
           </p>
         </Reveal>
 
@@ -22,7 +22,7 @@ export function GallerySection() {
           {gallery.map((item, i) => (
             <Reveal
               key={item.title}
-              delay={i * 30}
+              delay={i * 10}
               className="mb-6 "
             >
               <figure className="group">
