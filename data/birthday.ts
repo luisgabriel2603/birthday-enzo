@@ -81,11 +81,13 @@ export const birthday = {
     from: "Com carinho",
     paragraphs: [
       {
-        message: "Querido irmão,\n\nVocê é um presente de Deus em nossas vidas. Trouxe cor para os dias mais sombrios.\n\nTe amo muito, amo ser sua irmã! Sou muito grata por ter visto você crescer. Sempre foi um menino muito alegre, determinado e carinhoso! Te admiro muito e, a cada dia que passa, vejo o homem virtuoso que tem se tornado. Sua presença me faz muita falta… Feliz vida, feliz aniversário, e que o nosso Deus continue te abençoando hoje e sempre.\n\nDa sua irmã mais linda e maravilhosa,",
+        message: `Querido irmão,\n\nVocê é um presente de Deus em nossas vidas. Trouxe cor para os dias mais sombrios.\n\nTe amo muito, amo ser sua irmã! Sou muito grata por ter visto você crescer. Sempre foi um menino muito alegre, determinado e carinhoso! Te admiro muito e, a cada dia que passa, vejo o homem virtuoso que tem se tornado. Sua presença me faz muita falta… Feliz vida, feliz aniversário, e que o nosso Deus continue te abençoando hoje e sempre.\n\nDa sua irmã mais linda e maravilhosa,`,
         author: "Laura"
       },
       {
-        message: "Feliz aniversário mano, muitos anos de vida e felicidades, saiba que você é uma pessoa muito especial nas nossas vidas. Dou muitas risadas sozinho lembrando das conversas e histórias hilárias que temos por aí e espero poder continuar escrevendo novas histórias nessa vida com você por perto",
+        message: `Feliz aniversário mano, muitos anos de vida e felicidades, saiba que você é uma pessoa muito especial nas nossas vidas. 
+
+        Sempre dou muitas risadas lembrando das conversas e histórias hilárias que temos por aí e espero poder continuar escrevendo novas histórias nessa vida com você por perto.`,
         author: "Gabriel"
       },
     ],
