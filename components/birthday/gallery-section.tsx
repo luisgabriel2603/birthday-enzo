@@ -30,7 +30,7 @@ export function GallerySection() {
                   <PhotoFrame
                     src={item.image}
                     alt={item.title}
-                    className="h-auto w-full object-contain"
+                    className="h-auto w-full object-contain "
                   />
 
                   <span className="absolute left-3 top-3 z-10 rounded-full bg-background/80 px-3 py-1 font-display text-[11px] uppercase tracking-widest text-accent backdrop-blur">

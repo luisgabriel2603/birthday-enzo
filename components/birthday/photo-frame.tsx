@@ -27,41 +27,6 @@ export function PhotoFrame({ src, alt, className, glow = true }: PhotoFrameProps
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent"
         aria-hidden="true"
       />
-       {/* Scanlines */}
-        <div
-          className="
-            pointer-events-none
-            absolute inset-0
-            opacity-20
-            bg-[linear-gradient(
-              to_bottom,
-              transparent_50%,
-              rgba(255,255,255,0.08)_50%
-            )]
-            bg-[length:100%_4px]
-          "
-          aria-hidden="true"
-        />
-
-        {/* Varredura holográfica */}
-        <div
-          className="
-            pointer-events-none
-            absolute
-            inset-x-0
-            top-0
-            h-[2px]
-            bg-gradient-to-r
-            from-transparent
-            via-red-400
-            to-transparent
-            shadow-[0_0_15px_rgba(239,68,68,0.9)]
-            transition-all
-            duration-1000
-            group-hover:top-full
-          "
-          aria-hidden="true"
-        />
     </div>
   )
 }

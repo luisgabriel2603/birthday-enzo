@@ -4,6 +4,7 @@ import { useState } from "react";
 import { GiSpiderWeb } from "react-icons/gi";
 import { birthday } from "@/data/birthday";
 import { Reveal } from "./reveal";
+import { PhotoFrame } from "./photo-frame";
 
 export function MessageSection() {
   const { message } = birthday;
@@ -24,6 +25,7 @@ export function MessageSection() {
               aria-hidden="true"
             />
             <div>
+
               <h2 className="mt-4 mb-2 font-display text-3xl font-bold uppercase tracking-tight text-balance md:text-4xl">
                 {message.title}
               </h2>
@@ -48,6 +50,13 @@ export function MessageSection() {
                     className="relative overflow-hidden rounded-2xl border border-red-400/20 bg-red-400/5 p-6 shadow-sm transition-all duration-500 hover:border-red-400/40 hover:bg-red-400/10 hover:shadow-lg"
                     style={{ transitionDelay: `${i * 120}ms` }}
                   >
+                    {p?.image && (
+                      <PhotoFrame
+                        src={p.image}
+                        alt={p.author}
+                        className="size-[50%] my-4 mx-auto object-contain"
+                      />
+                    )}
                     <span className="absolute -top-5 left-4 font-serif text-7xl leading-none text-red-400/20">
                       “
                     </span>
