@@ -37,7 +37,10 @@ export function SetlistSection() {
                 >
                   <button
                     type="button"
-                    onClick={() => setPlaying(isPlaying ? null : i)}
+                    onClick={() => {
+                      setPlaying(isPlaying ? null : i);
+                      window.open(track.link, "_blank");
+                    }}
                     className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground transition-transform hover:scale-110"
                     aria-label={
                       isPlaying
